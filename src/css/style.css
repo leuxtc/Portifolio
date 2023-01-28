@@ -102,10 +102,31 @@ main {
     background-color: var(--black);
 }
 
+.server {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.server::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.server:hover::before {
+    transition: .8s;
+    width: 10px;
+    height: 15px;
+    border-radius: 2px;
+}
+
 .img {
     transition: .3s;
     border-radius: 50%;
-    margin: 10px 0;
+    margin: 10px 17px;
 }
 
 .img:hover {
