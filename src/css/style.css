@@ -12,6 +12,7 @@
 /* COLORS */
 :root {
     --black: #000000;
+    --black_lessdark: #161616;
     --black-darklight: #212121;
     --black-light: #242424;
     --grey-dark: #424242;
@@ -21,9 +22,11 @@
     --green-dark: #346936;
 }
 
+/* ---------------GLOBAL CONFIGS---------------- */
+
 /* SCROLLBAR */
 ::-webkit-scrollbar{
-    background-color: white;
+    background-color: transparent;
     width: 8px;
 }
 
@@ -56,7 +59,16 @@ a {color: var(--white); text-decoration: none;}
 .item {
     display: flex;
     align-items: center;
+    padding: 0 5px;
 }
+
+/* PORTIFOLIO */
+#portifolio {
+    border-radius: 5px;
+    background-color: var(--green);
+}
+
+/* ---------------MAIN---------------- */
 
 /* CONTAINERS */
 main {
@@ -78,13 +90,56 @@ main {
     font-family: 'Unbounded', Arial, Helvetica, sans-serif ,cursive;
     font-size: .5em;
 
-    margin: 5px 10px;
+    margin: 5px 15px;
 }
 
 /* SERVERS */
 .socials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     grid-column: 1;
     background-color: var(--black);
+}
+
+.img {
+    transition: .3s;
+    border-radius: 50%;
+    margin: 10px 0;
+}
+
+.img:hover {
+    transition: .5s;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.start {
+    background-color: #4caf50;
+}
+
+.bar {
+    align-self: center;
+    width: 30px;
+    height: 1px;
+    margin: 10px;
+    background-color: white;
+}
+
+.github {
+    background-color: #ffffff;
+}
+
+.linkedin {
+    background-color: #0077b7;
+}
+
+.repo {
+    background-color: #ffffff;
+}
+
+.gmail {
+    background-color: #ffffff;
 }
 
 /* LANGUAGES */
@@ -96,12 +151,15 @@ h1,
 }
 
 .languages {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    display: grid;
+    grid-template-rows: .1fr 63vh;
 
     grid-column: 2;
     background-color: var(--black-darklight);
+}
+
+.sections {
+    grid-row: 1;
 }
 
 .languages h1 {
@@ -117,22 +175,18 @@ h1,
 .languages-list {
     display: flex;
     flex-direction: column;
-    max-height: 71vh;
-}
 
-.languages-list #portifolio {
-    border-radius: 5px;
-    background-color: var(--green);
+    grid-row: 2;
 }
 
 /* PERFIL */
 .perfil {
     display: flex;
-    background-color: black;
-}
+    align-self: flex-end;
 
-.perfil p{
-    color: black;
+    grid-row: 4;
+
+    background-color: var(--black_lessdark);
 }
 
 /* ACTIVITY */
