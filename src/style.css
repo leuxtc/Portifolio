@@ -12,7 +12,7 @@
 /* COLORS */
 :root {
     --black:          #000000;
-    --black_lessdark: #161616;
+    --black-lessdark: #161616;
     --black-darklight:#121212;
     --black-light:    #242424;
     --grey-dark:      #424242;
@@ -49,12 +49,6 @@ a {color: var(--white); text-decoration: none;}
     overflow-y: scroll;
 }
 
-/* HOVERS */
-.item:hover {
-    background-color: var(--press);
-    border-radius: 5px;
-}
-
 /* ITEMS */
 .item {
     display: flex;
@@ -62,10 +56,29 @@ a {color: var(--white); text-decoration: none;}
     padding: 0 5px;
 }
 
+.item:hover {
+    background-color: var(--press);
+    border-radius: 5px;
+}
+
 /* PORTIFOLIO */
 #portifolio {
+    transition: .3s;
+    text-decoration: none;
+    border-left: solid 6px var(--green-dark);
     border-radius: 5px;
     background-color: var(--green);
+}
+
+#portifolio:hover {
+    transition: .3s;
+    background-color: var(--green-dark);
+}
+
+.bi-star-fill:hover {
+    transition: .5s;
+    transform: rotate(1turn) scale(1.2);
+    color: yellow;
 }
 
 /* ---------------MAIN---------------- */
@@ -206,7 +219,7 @@ h1,
 
     grid-row: 4;
 
-    background-color: var(--black_lessdark);
+    background-color: var(--black);
 }
 
 /* ACTIVITY */
