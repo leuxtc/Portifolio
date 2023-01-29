@@ -56,7 +56,7 @@ p{color: var(--white-dark); margin: 0 5px;}
     display: flex;
     align-items: center;
     padding: 0 5px;
-    height: 50px;
+    height: 45px;
     font-size: .8em;
     cursor: pointer;
 }
@@ -105,6 +105,7 @@ main {
 .header h1 {
     font-family: 'Unbounded', Arial, Helvetica, sans-serif ,cursive;
     font-size: .5em;
+    margin: 0 10px;
 }
 
 /* SERVERS */
