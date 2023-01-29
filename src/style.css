@@ -319,13 +319,18 @@ main {
     cursor: pointer;
 }
 
+.active-header p {
+    color: var(--white);
+}
+
+.active-title .bar {
+    width: 13px;
+    rotate: z 90deg;
+}
+
 .nav {
     display: flex;
     justify-content: space-between;
-}
-
-.active-header p {
-    color: var(--white);
 }
 
 .active-header ul {
