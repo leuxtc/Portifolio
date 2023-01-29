@@ -49,31 +49,32 @@
 }
 
 /* ITEMS */
-a {text-decoration: none;}
 a:hover {text-decoration: none;}
+p{color: var(--white-dark); margin: 0 5px;}
 
 .item {
     display: flex;
     align-items: center;
     padding: 0 5px;
     height: 50px;
-    color: var(--white-dark);
     font-size: .8em;
+    cursor: pointer;
 }
 
 .item:hover {
     border-radius: 5px;
     background-color: var(--press);
-    color: var(--white);
-    cursor: pointer;
 }
 
+.item:hover p{
+    color: var(--white);
+}
 
 /* ICONS */
 .icon {
     border-radius: 50%;
     background-color: #0077b7;
-    margin: 5px;
+    width: 30px;
 }
 
 .bi {
@@ -83,6 +84,10 @@ a:hover {text-decoration: none;}
 /* ---------------MAIN---------------- */
 
 /* CONTAINERS */
+body, html {
+    overflow: hidden;
+}
+
 main {
     display: grid;
     grid-template-columns: 70px 220px 1fr;
@@ -145,10 +150,10 @@ main {
 }
 
 .bar {
-    width: 30px;
+    width: 20px;
     height: 1px;
-    margin: 10px 0 10px 20px;
-    background-color: white;
+    margin: 10px auto;
+    background-color: rgba(255, 255, 255, 0.341);
 }
 
 .start {
@@ -186,10 +191,18 @@ main {
     grid-row: 1;
 }
 
+.sections i {
+    margin-left: 5px;
+}
+
+.btn p {
+    margin-left: 10px;
+}
+
 .languages h1 {
     display: flex;
     justify-content: space-between;
-    margin: 10px;    
+    margin: 10px auto;
     font-family: 'Unbounded', Arial, Helvetica, sans-serif ,cursive;
     font-size: .5em;
     color: var(--white-dark);
@@ -216,7 +229,6 @@ main {
     border-radius: 5px;
     background-color: var(--green);
     text-decoration: none;
-    color: var(--white-dark);
 }
 
 .name {
@@ -226,7 +238,8 @@ main {
 
 .name p {
     margin-bottom: 0rem;
-    line-height: 1.4em;
+    line-height: 1.3em;
+    color: var(--black);
 }
 
 .name p#aboutme {
@@ -248,15 +261,31 @@ main {
     color: yellow;
 }
 
+.languages-users {
+    margin-top: 50px;
+}
+
 /* PERFIL */
 .perfil {
     display: flex;
     align-self: flex-end;
+    align-items: center;
 
     position: absolute;
     width: 220px;
 
     background-color: var(--black);
+}
+
+#username {
+    font-weight: bold;
+    font-size: .8em;
+    color: var(--white-dark);
+}
+
+#tag {
+    color: #9e9e9ec9;
+    font-size: .7em;
 }
 
 /* ACTIVITY */
