@@ -253,7 +253,7 @@ main {
 
 .bi-star-fill {
     transition: 1s;
-    margin: 0 40px;
+    margin: 0 35%;
 }
 
 .bi-star-fill:hover {
@@ -274,6 +274,7 @@ main {
 
     position: absolute;
     width: 220px;
+    padding: 5px;
 
     background-color: var(--black);
 }
