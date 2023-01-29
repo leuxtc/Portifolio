@@ -16,11 +16,11 @@
     --black-darklight:#121212;
     --black-light:    #212121;
     --grey-dark:      #424242;
+    --grey-light:     #9e9e9e39;
     --blue:           #0077b7;
     --green-dark:     #346936;
     --green:          #4caf50;
     --green-press:    #50bb54;
-    --press:          #9e9e9e39;
     --white-dark:     #9e9e9e;
     --white:          #ffffff;
 }
@@ -60,7 +60,7 @@ p{color: var(--white-dark); margin: 0 5px;}
 
 .press:hover {
     border-radius: 5px;
-    background-color: var(--press);
+    background-color: var(--grey-light);
 }
 
 .press:hover p{
@@ -441,10 +441,31 @@ svg {
     border: none;
 }
 
+.active-item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.active-item-left {
+    display: flex;
+    align-items: center;
+}
+
+
+.active-item-right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--grey-light);
+}
+
 .active-languages .item {
     display: flex;
     padding: 30px 10px;
-    border-bottom: solid 1px var(--press);
+    border-bottom: solid 1px var(--grey-light);
 }
 
 .active-languages .icon {
@@ -453,6 +474,6 @@ svg {
 
 /* LEARN */
 .learn {
-    border-left: solid 1px var(--press);
+    border-left: solid 1px var(--grey-light);
     background-color: var(--grey-dark);
 }
