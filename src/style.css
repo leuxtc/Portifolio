@@ -14,7 +14,7 @@
     --black:          #000000;
     --black-lessdark: #161616;
     --black-darklight:#121212;
-    --black-light:    #242424;
+    --black-light:    #212121;
     --grey-dark:      #424242;
     --green-dark:     #346936;
     --green:          #4caf50;
@@ -73,7 +73,6 @@ p{color: var(--white-dark); margin: 0 5px;}
 /* ICONS */
 .icon {
     border-radius: 50%;
-    background-color: #0077b7;
     width: 30px;
 }
 
@@ -290,7 +289,7 @@ main {
     font-size: .7em;
 }
 
-/* ACTIVITY */
+/* ACTIVE HEADER*/
 .active {
     display: grid;
     grid-row: 2;
@@ -359,10 +358,40 @@ main {
     background-color: transparent;
 }
 
+/* ACTIVE LANGUAGES */
+
 .active-languages {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
     background-color: var(--grey-dark);
 }
 
+.active-languages p {color: var(--white);}
+
+.search {
+    border-radius: 5px;
+    background-color: var(--black-light);
+}
+
+#search {
+    border: none;
+    border-radius: 5px;
+    padding: 0 10px;
+    width: 95%;
+    background-color: var(--black-light);
+}
+
+
+
+.active-languages .item {
+    padding: 30px 10px;
+    border-bottom: solid 1px var(--press);
+}
+
+.active-languages .icon {
+    width: 35px;
+}
 
 /* LEARN */
 .learn {
