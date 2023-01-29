@@ -104,11 +104,16 @@ main {
 }
 
 /* SERVERS */
+.leftbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--black-darklight);
+}
+
 .socials {
     display: flex;
     flex-direction: column;
-    grid-column: 1;
-    background-color: var(--black-darklight);
 }
 
 .server {
@@ -137,7 +142,6 @@ main {
     border-radius: 50%;
     margin: 10px 10px 5px 5px;
 }
-.start {margin-left: 10px;}
 
 .img:hover {
     transition: .5s;
@@ -152,10 +156,6 @@ main {
     background-color: rgba(255, 255, 255, 0.341);
 }
 
-.start {
-    background-color: var(--grey-dark);
-}
-
 .github {
     background-color: #ffffff;
 }
@@ -164,12 +164,13 @@ main {
     background-color: #0077b7;
 }
 
-.repo {
+.gmail {
     background-color: #ffffff;
 }
 
-.gmail {
-    background-color: #ffffff;
+.fixed {
+    margin-left: 10px;
+    background-color: var(--grey-dark);
 }
 
 /* LANGUAGES */
