@@ -314,6 +314,8 @@ svg {
     flex-direction: column;
     padding: 0 10px;
 
+    height: 65vh;
+
     grid-row: 2;
 }
 
@@ -539,33 +541,39 @@ svg {
     border-radius: 50%;
     width: 35px;
     height: 35px;
-    
 }
+
+.active-info p:nth-child(2){
+    font-size: .8em;
+    color: var(--white-dark);
+}
+
+.press:hover .active-info p:nth-child(1):after {
+    content: '#0000';
+    margin-left: 5px;
+    color: var(--white-dark);
+}
+
+.press:hover #js::after, 
+.press:hover #py::after {
+    content: '#0200';
+}
+
+.press:hover #html::after, 
+.press:hover #css::after {
+    content: '#0400';
+}
+
+.press:hover #c::after {
+    content: '#0300';
+}
+
 
 .active-icon {
     display: flex;
+    font-size: .8em;
     gap: 10px;
 }
-
-/*. active-item-right #msg {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 35px;
-    height: 35px;
-    border-radius: inherit;
-    background-color: var(--grey-light);
-}
-
-.active-item-right #msg {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 35px;
-    height: 35px;
-    border-radius: inherit;
-    background-color: var(--grey-light);
-} */
 
 .active-languages .item {
     display: flex;
