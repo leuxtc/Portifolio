@@ -44,6 +44,7 @@
 }
 
 /* ITEMS */
+a{text-decoration: none;}
 a:hover {text-decoration: none;}
 p{color: var(--white-dark); margin: 0 5px;}
 .bi{font-style: normal;}
@@ -459,8 +460,79 @@ svg {
     padding: 0 10px;
 }
 
-.bi-question-circle-fill:hover {
+.button {
     background-color: transparent;
+    border: none;
+    color: var(--white-dark);
+    cursor: pointer;
+}
+
+.button:focus {
+    outline: none;
+}
+
+.button:hover {
+    color: var(--white);
+}
+
+.modal-content {
+    background-color: var(--white);
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-body .modal-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--grey-dark);
+}
+
+.modal-title, .modal-status p, .modal-status b {
+    color: var(--black-darklight);
+    margin: 0;
+}
+
+.modal-status, .modal-tags {
+    display: flex;
+    margin: 10px 0;
+    padding: 0 10px;
+    gap: 10px;
+}
+
+.modal-tags {
+    display: flex;
+    flex-direction: column;
+}
+
+.tag {
+    font-weight: bold;    
+    cursor: pointer;
+}
+
+.tag p:hover {
+    color: var(--black-light);
+}
+
+.tag:hover p::after {
+    content: 'Never study';
+    font-weight: normal;
+    padding-left: 20px;
+}
+
+.tag:hover #days::after {
+    content: 'Studied for 60 days';
+}
+
+.tag:hover #mounth::after {
+    content: 'Studied for 1 mouth';
+}
+
+.tag:hover #year::after {
+    content: 'Studied for 1 year';
 }
 
 /* ACTIVE LANGUAGES */
