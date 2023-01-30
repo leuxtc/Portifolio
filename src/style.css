@@ -426,18 +426,18 @@ svg {
     transform: scale(.9);
 }
 
-#search:focus {
+#searchInput:focus {
     outline: none;
 }
 
-#search {
+#searchInput {
     border: none;
     border-radius: 5px;
     width: 100%;
     background-color: var(--black-light);
 }
 
-#search::placeholder {
+#searchInput::placeholder {
     border: none;
 }
 
@@ -446,11 +446,14 @@ svg {
     justify-content: space-between;
 }
 
+.active-item:hover i {
+    background-color: var(--black-light);
+}
+
 .active-item-left {
     display: flex;
     align-items: center;
 }
-
 
 .active-item-right{
     display: flex;
@@ -461,6 +464,7 @@ svg {
     border-radius: 50%;
     background-color: var(--grey-light);
 }
+
 
 .active-languages .item {
     display: flex;
