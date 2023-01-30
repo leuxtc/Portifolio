@@ -101,6 +101,14 @@ p{color: var(--white-dark); margin: 0 5px;}
     border-radius: inherit;
 }
 
+.icon .indicator .status::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 .icon.online .indicator .status{
     background: var(--green);
 }
@@ -111,13 +119,25 @@ p{color: var(--white-dark); margin: 0 5px;}
 
 .icon.idle .indicator .status::after {
     background: var(--grey-dark);
-    width: 7px;
-    height: 7px;
+    width: 6px;
+    height: 6px;
     border-radius: inherit;
     top: 0;
     left: 0;
     transform: none;
 }
+
+.icon.off .indicator .status{
+    background: var(--white-dark);
+}
+
+.icon.off .indicator .status::after {
+    background: var(--grey-dark);
+    width: 4px;
+    height: 4px;
+    border-radius: inherit;
+}
+
 
 .bi {
     font-size: 18px;
@@ -296,6 +316,7 @@ svg {
 .portifolio {
     display: flex;
     position: absolute;
+    z-index: 1;
     width: 190px;
     border-radius: 5px;
     background-color: var(--black);
@@ -328,11 +349,11 @@ svg {
 .bi-star-fill {
     transition: 1s;
     font-size: .8em;
+    margin-left: 35%;
 }
 
 .portifolio:hover .bi-star-fill{
     transition: .8s;
-    margin: 0 35%;
     transform: rotate(.2turn) scale(2);
     color: yellow;
 }
