@@ -41,6 +41,7 @@
 /* OVERFLOW */
 .overflow {
     overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 /* ITEMS */
@@ -394,11 +395,11 @@ svg {
     font-size: .7em;
 }
 
-/* ACTIVE HEADER*/
+/* ACTIVE */
 .active {
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: 30px 1fr;
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: 30px;
 
     grid-row: 2;
     grid-column: 3;
@@ -406,6 +407,7 @@ svg {
 
 .active-header {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
 
@@ -433,13 +435,9 @@ svg {
     rotate: z 90deg;
 }
 
-.nav {
-    display: flex;
-    justify-content: space-between;
-}
-
 .active-header ul {
     display: flex;
+    flex-wrap: wrap;
     height: 0;
 }
 
@@ -484,6 +482,27 @@ svg {
     flex-direction: column;
 }
 
+.modal-body h1 {
+    font-size: 1em;
+    font-weight: bold;
+    margin: 10px;
+}
+
+.modal-body p {
+    color: var(--black);
+}
+
+.modal-body a {
+    font-weight: bold;
+    font-style: italic;
+    color: var(--black);
+}
+
+.status {
+    background-color: rgba(0, 0, 0, 0.225);
+    border-radius: 5px;
+}
+
 .modal-body .modal-icon {
     width: 30px;
     height: 30px;
@@ -519,6 +538,7 @@ svg {
 
 .tag:hover p::after {
     content: 'Never study';
+    font-style: italic;
     font-weight: normal;
     padding-left: 20px;
 }
@@ -659,6 +679,33 @@ svg {
 
 /* LEARN */
 .learn {
+    padding: 20px;
     border-left: solid 1px var(--grey-light);
     background-color: var(--grey-dark);
+}
+
+.learn h1 {
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.studying {
+    width: 95%;
+    margin: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: var(--black-light);
+}
+
+.studying:hover {
+    background-color: var(--black);
+}
+
+.software {
+    display: flex;
+    width: 100%;
+    height: 60px;
+    border-radius: inherit;
+    padding: 5px;
+    background-color: var(--grey-light);
 }
