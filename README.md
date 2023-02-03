@@ -1,9 +1,12 @@
 # Portifolio
 
+> **Warning**
+> Work in progress
+
 A site from my portfolio based on the discord
-
-
-##Preview home
-<a href="https://leuxtc.github.io/Portifolio/home.html" target="_blank">
-  ![Captura de tela de 2023-02-03 19-07-55](https://user-images.githubusercontent.com/76859490/216720889-d2c42191-f961-4f48-90b7-34247d08b324.png)
+##
+> <h2>Preview home</h2>
+> <a href="https://leuxtc.github.io/Portifolio/home.html" target="_blank">
+  ![Captura de tela de 2023-02-03 19-07-55](https://user-images.githubusercontent.com/76859490/216723984-dcd05817-b32f-4443-8086-96382cef4a4c.png)  
 </a>
+
