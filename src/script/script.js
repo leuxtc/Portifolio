@@ -30,3 +30,10 @@ function filterNames() {
     
 }
 
+varvar
+
+for (var i = 0; i < 99999; i++) {
+    var count = [i]
+    var elapsed = document.getElementById("elapsed");
+    elapsed.innerHTML = "Elapsed: " + count;
+}

@@ -680,6 +680,7 @@ svg {
 /* LEARN */
 .learn {
     padding: 20px;
+
     border-left: solid 1px var(--grey-light);
     background-color: var(--grey-dark);
 }
@@ -690,22 +691,41 @@ svg {
 }
 
 .studying {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
     width: 95%;
+    
     margin: 15px;
     padding: 10px;
+    gap: 10px;
+
     border-radius: 5px;
     background-color: var(--black-light);
+    cursor: pointer;
 }
 
 .studying:hover {
     background-color: var(--black);
 }
 
+.studying-item {
+    display: flex;
+}
+
 .software {
     display: flex;
+    
     width: 100%;
     height: 60px;
+    padding: 10px 0;
+    
     border-radius: inherit;
-    padding: 5px;
     background-color: var(--grey-light);
+}
+
+.software-infos p:nth-child(2) {
+    line-height: .9em;
+    font-size: .8em;
 }
