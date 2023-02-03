@@ -59,6 +59,10 @@ p{color: var(--white-dark); margin: 0 5px;}
     cursor: pointer;
 }
 
+:hover {
+    transition: .3s ease-in;
+}
+
 .press:hover {
     border-radius: 5px;
     background-color: var(--grey-light);
@@ -707,6 +711,9 @@ svg {
 }
 
 .studying:hover {
+    transition: .8s ease;
+    transform: scale(1.05);
+    box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.178);
     background-color: var(--black);
 }
 
