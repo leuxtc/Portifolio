@@ -6,5 +6,5 @@
 A site from my portfolio based on the discord
 ##
 > <h2>Preview home</h2>
-![Opera Instantâneo_2023-02-03_204431_127 0 0 1](https://user-images.githubusercontent.com/76859490/216732109-f5616db4-e551-4246-95be-c8e7c22ec9cd.png)
+![Opera Instantâneo_2023-02-03_204431_127 0 0 1](https://user-images.githubusercontent.com/76859490/216732325-d914e3d7-1b0a-4a38-b16b-50fe0bf6d3c2.png)
 
