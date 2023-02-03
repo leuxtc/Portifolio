@@ -6,5 +6,5 @@
 A site from my portfolio based on the discord
 ##
 > <h2>Preview home</h2>
-![Captura de tela de 2023-02-03 19-07-55](https://user-images.githubusercontent.com/76859490/216723984-dcd05817-b32f-4443-8086-96382cef4a4c.png)  
+![Opera Instantâneo_2023-02-03_204431_127 0 0 1](https://user-images.githubusercontent.com/76859490/216732109-f5616db4-e551-4246-95be-c8e7c22ec9cd.png)
 
