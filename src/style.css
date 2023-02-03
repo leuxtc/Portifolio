@@ -12,37 +12,28 @@
 /* COLORS */
 :root {
     --black:          #000000;
-    --black-darklight:#0F1217;
-    --black-light:    #262625;
-    --grey-dark:      #454A52;
-    --grey-light:     #9e9e9e39;
-    --white-dark:     #9e9e9e;
+    --black-light:    #161616;
+    --white-moredark: #e0dfe0;
+    --white-dark:     #d8d7d8;
     --white:          #ffffff;
     --yellow:         #faa61a;
-    --green-dark:     #346936;
-    --green:          #4caf50;
+    --green-dark:     #2A8500;
+    --green:          #4AD10D;
     --green-press:    #50bb54;
     --blue:           #0077b7;
-}
-
-:root {
-    --escuro: #0D0D0D;
-    --claro: #828FD9;
-    --claro-escuro: #20308C;
-    --escuro-claro: #2B45D9;
-    --escuro-azul: #0D17D9;
+    --purple:         #d10cc7;
+    --purple-light:   #FF29F4;
+    --purple-dark:    #85047E;
 }
 
 /* ---------------GLOBAL CONFIGS---------------- */
 
 /* SCROLLBAR */
 ::-webkit-scrollbar{
-    background-color: transparent;
     width: 8px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: var(--black);
     border-radius: 8px;
 }
 
@@ -53,9 +44,8 @@
 }
 
 /* ITEMS */
-a{text-decoration: none;}
-a:hover {text-decoration: none;}
-p{color: var(--claro); margin: 0 5px;}
+a{color: var(--black); text-decoration: none;}
+p{color: var(--black); margin: 0 5px;}
 .bi{font-style: normal;}
 
 .item {
@@ -67,16 +57,18 @@ p{color: var(--claro); margin: 0 5px;}
     cursor: pointer;
 }
 
-:hover {
-    transition: .3s ease-in;
-}
-
 .press:hover {
+    transition: .8s;
     border-radius: 5px;
-    background-color: var(--claro);
+    background-color: var(--purple-dark);
 }
 
 .press:hover p{
+    color: var(--white);
+}
+
+a:hover {
+    text-decoration: none;
     color: var(--white);
 }
 
@@ -101,10 +93,10 @@ p{color: var(--claro); margin: 0 5px;}
     width: 10px;
     height: 10px;
     border-radius: inherit;
-    background: var(--grey-dark);
     overflow: hidden;
     display: grid;
     place-items: center;
+    background: var(--black);
 }
 
 .icon .indicator .status {
@@ -130,26 +122,26 @@ p{color: var(--claro); margin: 0 5px;}
 }
 
 .icon.idle .indicator .status::after {
-    background: var(--grey-dark);
     width: 6px;
     height: 6px;
     border-radius: inherit;
     top: 0;
     left: 0;
     transform: none;
+    background: var(--black);
 }
 
 .icon.off .indicator .status{
+    width: 5px;
+    height: 5px;
     background: var(--white-dark);
 }
 
 .icon.off .indicator .status::after {
-    background: var(--grey-dark);
     width: 4px;
     height: 4px;
     border-radius: inherit;
 }
-
 
 .bi {
     font-size: 18px;
@@ -175,7 +167,7 @@ main {
     grid-column: 1/4;
     margin: 0;
     
-    background-color: var(--escuro);
+    background-color: var(--black);
 }
 
 .header h1 {
@@ -189,7 +181,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: var(--black);
+    background-color: var(--black-light);
 }
 
 .socials {
@@ -234,7 +226,7 @@ main {
     width: 20px;
     height: 1px;
     margin: 10px auto;
-    background-color: rgba(255, 255, 255, 0.341);
+    background-color: var(--white);
 }
 
 .github {
@@ -242,7 +234,7 @@ main {
 }
 
 .linkedin {
-    background-color: var(--escuro-claro);
+    background-color: var(--blue);
 }
 
 .gmail {
@@ -253,30 +245,33 @@ svg {
     width: 20px;
     height: 20px;
     margin: 15px;
+    fill: var(--white);
 }
 
 .svg {
     width: 50px;
     height: 50px;
     margin-left: 10px;
-    background-color: var(--claro-escuro);
+    background-color: var(--purple);
 }
 
-#svg-bottom:hover svg {
-    fill: var(--white);
+.svg:hover svg {
+    fill: var(--purple);
 }
 
-#svg-bottom:hover {
-    background-color: var(--claro);
+.svg:hover {
+    background-color: var(--white);
 }
 
 /* LANGUAGES */
 .languages {
     display: grid;
     grid-template-rows: .1fr 1fr 1fr;
+    z-index: 1;
 
     grid-column: 2;
-    background-color: var(--black-darklight);
+    box-shadow: 3px 30px 10px rgba(0, 0, 0, 0.11);
+    background-color: var(--white-dark);
 }
 
 .sections {
@@ -285,11 +280,29 @@ svg {
     grid-row: 1;
 }
 
+.sections-btn {
+    transition: .8s;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.11);
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+.sections-btn:hover{
+    transform: scale(1.09);
+    background-color: var(--white);
+}
+
+.sections-btn:hover p, .sections-btn:hover i{
+    color: var(--purple);
+}
+
 .sections i {
+    color: var(--black-light);
     margin-left: 5px;
 }
 
 .btn p {
+    color: var(--black-light);
     margin-left: 10px;
 }
 
@@ -298,26 +311,26 @@ svg {
     font-size: .5em;
     margin: 10px 0;
     font-family: 'Unbounded', Arial, Helvetica, sans-serif ,cursive;
-    color: var(--claro);
+    color: var(--black-light);
 }
 
 .languages .title {
     display: flex;
     justify-content: space-between;
-
+    
     margin: 10px auto 5px auto;
     font-family: 'Unbounded', Arial, Helvetica, sans-serif ,cursive;
     font-size: .5em;
     
-    color: var(--white-dark);
     cursor: pointer;
 }
 
 .languages .title:hover {
-    color: var(--white);
+    color: var(--purple-dark);
 }
 
-.bi-plus-lg {
+.languages .bi-plus-lg {
+    color: var(--green-dark);
     font-size: 1.1em;
 }
 
@@ -334,14 +347,28 @@ svg {
 
 /* PORTIFOLIO */
 .portifolio {
+    transition: .8s;
     display: flex;
     position: absolute;
     z-index: 1;
     width: 190px;
     border-radius: 5px;
-    background-color: var(--claro-escuro);
     text-decoration: none;
+    background-color: var(--purple-dark);
 }
+
+.portifolio:hover .bi-star-fill{
+    transition: .8s;
+    transform: rotate(.2turn) scale(2);
+    color: var(--green);
+}
+
+.portifolio:hover {
+    background-color: var(--white);
+    transform: scale(1.02);
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.11);
+}
+
 
 .name {
     display: flex;
@@ -351,7 +378,7 @@ svg {
 .name p {
     margin-bottom: 0rem;
     line-height: 1.3em;
-    color: var(--claro);
+    color: var(--white);
 }
 
 .name p#name {
@@ -362,20 +389,14 @@ svg {
     font-size: .8em;
 }
 
-.portifolio:hover {
-    background-color: var(--claro);
-}
-
 .bi-star-fill {
     transition: 1s;
     font-size: .8em;
     margin-left: 35%;
 }
 
-.portifolio:hover .bi-star-fill{
-    transition: .8s;
-    transform: rotate(.2turn) scale(2);
-    color: yellow;
+.portifolio:hover p {
+    color: var(--purple-dark);
 }
 
 .languages-users {
@@ -393,13 +414,12 @@ svg {
     width: 220px;
     padding: 5px;
 
-    background-color: var(--);
+    background-color: var(--black);
 }
 
 #username {
     font-weight: bold;
     font-size: .8em;
-    color: var(--white-dark);
 }
 
 #tag {
@@ -426,8 +446,7 @@ svg {
     grid-column: 1/3;
     z-index: 1;
 
-    box-shadow: 7px 0px 10px rgba(0, 0, 0, 0.158);
-    background-color: var(--grey-dark);
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.11);
     font-size: .8em;
 }
 
@@ -438,13 +457,14 @@ svg {
     cursor: pointer;
 }
 
-.active-header p {
-    color: var(--white);
+.active-title i {
+    color: var(--black-light);
 }
 
 .active-title .bar {
     width: 13px;
     rotate: z 90deg;
+    background-color: var(--green);
 }
 
 .active-header ul {
@@ -456,15 +476,14 @@ svg {
 .active-header #add {
     border-radius: 5px;
     color: var(--white);
+    background-color: var(--green-dark);
+}
+
+.active-header #add:hover {
     background-color: var(--green);
 }
 
-.active-header a:hover {
-    color: var(--white);
-}
-
 .active-header a {
-    color: var(--white-dark);
     align-self: center;
     margin-left: 10px;
     padding: 0 10px;
@@ -473,7 +492,7 @@ svg {
 .button {
     background-color: transparent;
     border: none;
-    color: var(--white-dark);
+    color: var(--black);
     cursor: pointer;
 }
 
@@ -482,11 +501,11 @@ svg {
 }
 
 .button:hover {
-    color: var(--white);
+    color: var(--black-light);
 }
 
 .modal-content {
-    background-color: var(--white);
+    background-color: var(--white-dark);
 }
 
 .modal-body {
@@ -494,24 +513,19 @@ svg {
     flex-direction: column;
 }
 
-.modal-body h1 {
+.modal-title {
     font-size: 1em;
     font-weight: bold;
     margin: 10px;
 }
 
-.modal-body p {
-    color: var(--black);
-}
-
 .modal-body a {
     font-weight: bold;
     font-style: italic;
-    color: var(--black);
 }
 
 .status {
-    background-color: rgba(0, 0, 0, 0.225);
+    background-color: var(--white);
     border-radius: 5px;
 }
 
@@ -519,17 +533,17 @@ svg {
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    background-color: var(--grey-dark);
+    background-color: var(--black);
 }
 
 .modal-title, .modal-status p, .modal-status b {
-    color: var(--black-darklight);
+    color: var(--black);
     margin: 0;
 }
 
 .modal-status, .modal-tags {
     display: flex;
-    margin: 10px 0;
+    margin: 4px 0;
     padding: 0 10px;
     gap: 10px;
 }
@@ -542,10 +556,6 @@ svg {
 .tag {
     font-weight: bold;    
     cursor: pointer;
-}
-
-.tag p:hover {
-    color: var(--black-light);
 }
 
 .tag:hover p::after {
@@ -573,14 +583,15 @@ svg {
     display: flex;
     flex-direction: column;
     padding: 30px;
-    background-color: var(--grey-dark);
+    background-color: var(--white-moredark);
 }
 
 .active-languages p {
-    color: var(--white);
+    color: var(--black);
 }
 
 .search {
+    transition: .8s;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -588,17 +599,19 @@ svg {
     padding: 5px;
     
     border-radius: 5px;
-    background-color: var(--black-light);
+    box-shadow: 0px 8px 10px 3px rgba(0, 0, 0, 0.082);
 }
+
 
 .bi-search {
-    transition: .3s;
     margin: 0;
+    fill: var(--black-light);
 }
 
-.search:hover .bi-search{
+.search:hover {
     transition: .8s;
-    transform: scale(.9);
+    transform: scale(1.09);
+    background-color: var(--white);
 }
 
 #searchInput:focus {
@@ -609,11 +622,13 @@ svg {
     border: none;
     border-radius: 5px;
     width: 100%;
-    background-color: var(--black-light);
+    color: var(--black-light);
+    background-color: inherit;
 }
 
 #searchInput::placeholder {
     border: none;
+    color: var(--black-light);
 }
 
 .active-list {
@@ -625,8 +640,23 @@ svg {
     justify-content: space-between;
 }
 
-.active-item:hover .active-item-right {
-    background-color: var(--black-light);
+.active-icon {
+    display: flex;
+    gap: 10px;
+}
+
+.active-icon i {
+    font-size: 1.2em;
+    color: var(--purple-dark);
+}
+
+.active-item:hover .active-item-right{
+    background-color: var(--white);
+}
+
+.active-item:hover i{
+    transition: .3s;
+    color: var(--purple-dark);
 }
 
 .active-item-left {
@@ -649,13 +679,13 @@ svg {
 
 .active-info p:nth-child(2){
     font-size: .8em;
-    color: var(--white-dark);
+    color: #e0dfe0;
 }
 
 .press:hover .active-info p:nth-child(1):after {
     content: '#0000';
     margin-left: 5px;
-    color: var(--white-dark);
+    color: var();
 }
 
 .press:hover #js::after, 
@@ -672,17 +702,10 @@ svg {
     content: '#0300';
 }
 
-
-.active-icon {
-    display: flex;
-    font-size: .8em;
-    gap: 10px;
-}
-
 .active-languages .item {
     display: flex;
     padding: 30px 10px;
-    border-bottom: solid 1px var(--grey-light);
+    border-bottom: solid 1px var();
 }
 
 .active-languages .icon {
@@ -693,16 +716,17 @@ svg {
 .learn {
     padding: 20px;
 
-    border-left: solid 1px var(--grey-light);
-    background-color: var(--grey-dark);
+    background-color: var(--white);
 }
 
 .learn h1 {
     font-weight: bold;
     font-size: 1em;
+    color: var(--black-light);
 }
 
 .studying {
+    transition: .3s;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -714,15 +738,17 @@ svg {
     gap: 10px;
 
     border-radius: 5px;
-    background-color: var(--black-light);
+    box-shadow: 0px 10px 10px 3px rgba(0, 0, 0, 0.225);
     cursor: pointer;
 }
 
+.studying p {
+    color: var(--black-light);
+}
+
 .studying:hover {
-    transition: .8s ease;
+    transition: .8s;
     transform: scale(1.05);
-    box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.178);
-    background-color: var(--black);
 }
 
 .studying-item {
@@ -731,16 +757,18 @@ svg {
 
 .software {
     display: flex;
-    
+    align-items: center;
+
     width: 100%;
     height: 60px;
     padding: 10px 0;
     
     border-radius: inherit;
-    background-color: var(--grey-light);
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.11);
+    background-color: var(--white-moredark);
 }
 
-.software-infos p:nth-child(2) {
-    line-height: .9em;
+.software-infos p {
+    line-height: 1em;
     font-size: .8em;
 }
